@@ -13,12 +13,16 @@ export async function GET() {
 // POST /api/posts  -> create a post
 export async function POST(req: Request) {
   try {
-    const { author, body } = await req.json();
+    const { author, body, title } = await req.json();
     if (!body || typeof body !== "string") {
       return NextResponse.json({ error: "Missing post body" }, { status: 400 });
     }
     const post = await prisma.post.create({
-      data: { author: (author || "Anonymous").toString(), body: body.trim() },
+      data: {
+        title: (title || "Untitled").toString(),
+        author: (author || "Anonymous").toString(),
+        body: body.trim(),
+      },
     });
     return NextResponse.json({ post }, { status: 201 });
   } catch (e) {
