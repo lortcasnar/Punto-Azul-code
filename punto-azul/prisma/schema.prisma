@@ -15,6 +15,7 @@ model post {
   id        Int       @id @default(autoincrement())
   title     String
   body      String
+  author    String
   createdAt DateTime  @default(now())
   comments  comment[]
 }
