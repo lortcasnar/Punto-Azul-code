@@ -11,9 +11,18 @@ datasource db {
 }
 
 
+model post {
+  id        Int       @id @default(autoincrement())
+  title     String
+  body      String
+  createdAt DateTime  @default(now())
+  comments  comment[]
+}
+
 model comment {
   id      Int    @id @default(autoincrement())
   postId  Int
   author  String
   body    String
+  post    post   @relation(fields: [postId], references: [id])
 }
