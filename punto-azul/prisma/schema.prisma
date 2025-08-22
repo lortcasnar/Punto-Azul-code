@@ -20,9 +20,10 @@ model post {
 }
 
 model comment {
-  id      Int    @id @default(autoincrement())
-  postId  Int
-  author  String
-  body    String
-  post    post   @relation(fields: [postId], references: [id])
+  id        Int      @id @default(autoincrement())
+  postId    Int
+  author    String
+  body      String
+  createdAt DateTime @default(now())
+  post      post     @relation(fields: [postId], references: [id])
 }
