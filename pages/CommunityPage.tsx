@@ -1,7 +1,7 @@
 "use client";
 import useSWR from "swr";
-import PostComposer from "@/components/PostComposer";
-import PostList from "@/components/PostList";
+import PostComposer from "../components/PostComposer";
+import PostList from "../components/PostList";
 
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 

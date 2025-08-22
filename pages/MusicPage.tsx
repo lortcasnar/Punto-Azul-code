@@ -1,5 +1,5 @@
 "use client";
-import EmbedPlayer from "@/components/EmbedPlayer";
+import EmbedPlayer from "../components/EmbedPlayer";
 
 export default function MusicPage() {
   return (

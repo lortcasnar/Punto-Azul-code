@@ -1,7 +1,7 @@
-import Hero from "@/components/Hero";
-import LookbookStrip from "@/components/LookbookStrip";
-import JournalStrip from "@/components/JournalStrip";
-import ProductCard from "@/components/ProductCard";
+import Hero from "../components/Hero";
+import LookbookStrip from "../components/LookbookStrip";
+import JournalStrip from "../components/JournalStrip";
+import ProductCard from "../components/ProductCard";
 
 export default function HomePage() {
   return (
